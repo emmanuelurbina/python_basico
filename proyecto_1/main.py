@@ -1,4 +1,3 @@
-
 """
 Calculadora basica
 Operaciones basicas (+ - * /)
@@ -35,7 +34,7 @@ if __name__ == "__main__":
             finally:
                 res = op_1 + op_2
                 print("El resultado es: {}".format(res))
-        
+
         if option == "2":
             try:
                 print("Resta")
@@ -46,7 +45,7 @@ if __name__ == "__main__":
             finally:
                 res = op_1 - op_2
                 print("El resultado es: {}".format(res))
-        
+
         if option == "3":
             try:
                 print("Multiplicación")
@@ -57,17 +56,17 @@ if __name__ == "__main__":
             finally:
                 res = op_1 * op_2
                 print("El resultado es: {}".format(res))
-        
+
         if option == "4":
             try:
                 print("Resta")
                 op_1 = float(input("Primer numero: "))
                 op_2 = float(input("Segundo numero: "))
             except:
-                print("Solo son validos enteros y decimales o no se puede dividir entre 0")
+                print("Solo son validos enteros y decimales")
             finally:
                 try:
-                    res = round(op_1 / op_2,4)
+                    res = round(op_1 / op_2, 4)
                 except ZeroDivisionError as err:
                     print("No se puede dividir entre 0")
                 finally:
