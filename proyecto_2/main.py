@@ -5,8 +5,6 @@ Operaciones basicas (+ - * /)
 """
 import os
 
-
-
 menu = """
 Menú Principal
 
@@ -18,11 +16,13 @@ x) Salir
 
 """
 
+
 def cls():
     """
     Limpia consola
     """
-    os.system('cls' if os.name=='nt' else 'clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 
 def pasa_numero():
     """
@@ -49,6 +49,7 @@ def suma_fn(num_1=0, num_2=0):
     finally:
         return resultado
 
+
 def resta_fn(num_1=0, num_2=0):
     """
     resta de dos números
@@ -60,6 +61,7 @@ def resta_fn(num_1=0, num_2=0):
         print("Ocurrio un error >_ {}".format(err))
     finally:
         return resultado
+
 
 def producto_fn(num_1=0, num_2=0):
     """
@@ -73,6 +75,7 @@ def producto_fn(num_1=0, num_2=0):
     finally:
         return resultado
 
+
 def division_fn(num_1=0, num_2=0):
     """
     division
@@ -85,14 +88,14 @@ def division_fn(num_1=0, num_2=0):
     finally:
         return resultado
 
+
 def calculadora():
     """
     Menú de calculadora.
     """
     continue_program = True
-    
+
     while continue_program:
-        
         print(menu)
 
         option = input("Escribe una opción del menú: ")
@@ -103,7 +106,7 @@ def calculadora():
             num_2 = pasa_numero()
             resultado = suma_fn(num_1, num_2)
             print("El resultado es: {}".format(resultado))
-        
+
         if option == "2":
             cls()
             print("Resta\n")
@@ -131,8 +134,6 @@ def calculadora():
         if option == "x" or option == "X":
             continue_program = False
             print("Hasta luego...")
-
-        
 
 if __name__ == "__main__":
     calculadora()
